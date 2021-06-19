@@ -964,7 +964,7 @@ body {
   border-color: var(--accent-color);
 }
 
-.modal-icon-check {
+/* .modal-icon-check {
   fill: var(--white-color);
   width: 16px;
   height: 15px;
@@ -973,6 +973,18 @@ body {
   border-color: var(--title-color);
   display: inline-block;
   vertical-align: middle;
+} */
+
+.modal-form-check-field::before {
+  content: '';
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-color);
+  border-radius: 2px;
+  border-color: var(--title-color);
+  display: inline-block;
+  vertical-align: middle;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-form-check-field {
@@ -982,12 +994,13 @@ body {
   margin-bottom: 30px;
 }
 
-.modal-form-check:checked + .modal-form-check-field .modal-icon-check {
+.modal-form-check:checked + .modal-form-check-field::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
+  background-image: url(/images/icons/user-check.svg);
 }
-.modal-form-check:hover + .modal-form-check-field .modal-icon-check,
-.modal-form-check:focus + .modal-form-check-field .modal-icon-check {
+.modal-form-check:hover + .modal-form-check-field::before,
+.modal-form-check:focus + .modal-form-check-field::before {
   border-color: var(--accent-color);
 }
 
