@@ -997,7 +997,7 @@ body {
 .modal-form-check:checked + .modal-form-check-field::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url(./images/icons/user-check.png);
+  background-image: url(../images/icons/user-check.png);
 }
 .modal-form-check:hover + .modal-form-check-field::before,
 .modal-form-check:focus + .modal-form-check-field::before {
